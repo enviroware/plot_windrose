@@ -23,7 +23,7 @@ def load_aermet_sfc_file(ff):
 
     myfile.close()
     
-    d = dict()
+    d = {}
     d['wind'] = wind
     d['latitude'] = latitude
     d['longitude'] = longitude
