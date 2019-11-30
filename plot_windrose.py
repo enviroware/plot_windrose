@@ -18,7 +18,8 @@ def load_aermet_sfc_file(ff):
     wind = []
     for line in lines[1:]:
         (year,month,day,j_day,hour,h_sens,u_star,w_star,vptg,zic,zim,lmo,z_zero,bowen,albedo,ws,wd,zref,temp,ztemp,ipcode,pamt,rh,pres,ccvr,wsadj,extra) = line.split()
-        wind.append([float(wd),float(ws)])
+        if (float(wd) >= 0 and float(ws) >=0):
+            wind.append([float(wd),float(ws)])
 
     myfile.close()
     
