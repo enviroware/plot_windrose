@@ -32,7 +32,7 @@ def load_aermet_sfc_file(ff):
 
 sfc_file = input("Please enter AERMOD.SFC file name: ")
 if not os.path.exists(sfc_file):
-    print(sfc_file+" does not exists.")
+    print(sfc_file+" does not exist.")
     exit()
 
 d = load_aermet_sfc_file(sfc_file)
